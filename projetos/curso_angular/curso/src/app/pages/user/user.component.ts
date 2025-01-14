@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class UserComponent implements OnInit {
   username: string | null = '';
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute){}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {

@@ -18,7 +18,7 @@ import { UserComponent } from './pages/user/user.component';
     FooterComponent,
     BaseUiComponent,
     UsersComponent,
-    UserComponent
+    UserComponent,
   ],
   imports: [
     BrowserModule,
