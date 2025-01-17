@@ -8,7 +8,23 @@ import { Component } from '@angular/core';
   styleUrl: './users.component.css'
 })
 export class UsersComponent {
-  users: String[] = [
-    'Vinicius', 'Julio', 'Larissa', 'Maria'
+  //users: String[] = ['Vinicius', 'Julio', 'Larissa', 'Maria']
+  user: User[] = [
+    {
+      nome:'Vinicius',
+      idade: 25,
+    },
+    {
+      nome:'Julio',
+      idade: 19,
+    },
+    {
+      nome:'Larissa',
+      idade: 45,
+    },
+    {
+      nome:'Maria',
+      idade: 32,
+    },
   ]
 }
