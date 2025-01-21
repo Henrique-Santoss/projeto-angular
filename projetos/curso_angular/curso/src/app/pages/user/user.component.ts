@@ -22,5 +22,5 @@ export class UserComponent implements OnInit {
     this.route.queryParams.subscribe((params) => {
       this.username = params['username'];
     });
-  };
+  }
 }
