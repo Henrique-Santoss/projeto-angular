@@ -13,9 +13,9 @@ export class HomeComponent implements DoCheck {
 
   ngDoCheck(): void{
     console.log('Uma mudança foi feita')
-  }
+  };
 
   adiciona1(){
     this.num++;
-  }
+  };
 }

@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 })
 export class UsersComponent {
   //users: String[] = ['Vinicius', 'Julio', 'Larissa', 'Maria']
+  userSelecionado: User | undefined;
+
   user: User[] = [
     {
       nome:'Vinicius',
@@ -26,5 +28,9 @@ export class UsersComponent {
       nome:'Maria',
       idade: 32,
     },
-  ]
+  ];
+
+  infoUserSelecionado( user: User ){
+    this.userSelecionado = user;
+  };
 }
