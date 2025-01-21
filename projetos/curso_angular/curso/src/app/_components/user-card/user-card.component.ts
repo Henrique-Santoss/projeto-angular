@@ -10,7 +10,7 @@ import { User } from '../../_models/user';
 })
 export class UserCardComponent {
   @Input() user: User = {
-    idade:0,
-    nome:'',
+    idade: 0,
+    nome: '',
   };
 }
