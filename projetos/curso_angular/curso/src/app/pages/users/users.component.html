@@ -2,14 +2,28 @@
   <div class="row">
     <div class="form-group col-md-6">
       <label for="nome">Nome</label>
-      <input id="nome" type="text" class="form-control" formControlName="nome">
+      <input id="nome" type="text" class="form-control is-invalid"
+      [class.is-invalid]="userForm.get('nome')?.errors && userForm.get('nome')?.touched" formControlName="nome">
+      <div *ngIf="userForm.get('nome')?.hasError('required')" class="invalid-feedback">
+        O campo nome é Obrigatório
+      </div>
+      <div *ngIf="userForm.get('nome')?.hasError('maxlenght')" class="invalid-feedback">
+        O campo nome não pode ultrapassar de 250 caracteres
+      </div>
     </div>
     <div class="form-group col-md-3">
       <label for="idade">Idade</label>
-      <input id="idade" type="number" class="form-control" formControlName="idade">
+      <input id="idade" type="number" class="form-control"
+      [class.is-invalid]="userForm.get('idade')?.errors && userForm.get('idade')?.touched" formControlName="idade">
+      <div *ngIf="userForm.get('idade')?.hasError('required')" class="invalid-feedback">
+        O campo idade é Obrigatório
+      </div>
+      <div *ngIf="userForm.get('idade')?.hasError('min') || userForm.get('idade')?.hasError('max')" class="invalid-feedback">
+        O campo idade deve ser entre 12 a 110
+      </div>
     </div>
   </div>
-  <button (click)="SubmitForm()" class="btn btn-success mt-3">Incluir</button>
+  <button [disabled]="!userForm.valid" (click)="SubmitForm()" class="btn btn-success mt-3">Incluir</button>
 </form>
 
 <div class="row">
